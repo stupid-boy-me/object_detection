@@ -1,0 +1,38 @@
+1.yolox的进行物体检测的第一步：运行测试代码
+2.运行训练代码
+3.听视频了解整体框架
+4.了解数据处理
+5.了解网络 有什么点很新奇，不要求网络的实现，了解如何构建整个模块即可
+6.了解训练策略 相关的tricks
+
+code：https://github.com/Megvii-BaseDetection/YOLOX
+超详细！手把手教你使用YOLOX进行物体检测（附数据集）
+https://zhuanlan.zhihu.com/p/477567587
+
+
+python tools/demo.py image -f exps/default/yolox_s.py -c ./yolox_s.pth --path assets/dog.jpg --conf 0.3 --nms 0.65 --tsize 640 --save_result --device gpu
+
+NVIDIA GeForce RTX 3060 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 compute_37.
+If you want to use the NVIDIA GeForce RTX 3060 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+
+sulotion:https://blog.csdn.net/Xunuo1995/article/details/115261069
+https://zhuanlan.zhihu.com/p/633473214
+
+
+study：https://github.com/Megvii-BaseDetection/YOLOX的代码
+
+训练自己的数据集
+https://zhuanlan.zhihu.com/p/397499216
+
+视频讲解地址：https://www.bilibili.com/video/BV1b34y1d76B/?spm_id_from=333.337.search-card.all.click&vd_source=5ba1bf3a19888ef725acbeaf5d3fc6e6
+步骤：
+1.配置环境
+2.了解一下目录结构
+3.验证demo脚本. 可以的话 训练的环境也基本ok了
+4.自建数据集训练 
+
+test
+python tools/demo.py image -f exps/default/yolox_s.py -c ./yolox_s.pth --path assets/dog.jpg --conf 0.3 --nms 0.65 --tsize 640 --save_result --device gpu
